@@ -1,33 +1,33 @@
-import { useState } from 'react'
+ import {useState} from 'react';
 import './App.css'
 
-function App() {
-   
- let [counter,setcounter] = useState(15)
-const addvalue = ()=>{
-  console.log("hello");
-  setcounter(counter + 1)
-}
-  const removevalue = ()=>{
-    console.log("ok");
-    setcounter(counter - 1)
 
-    
-  }
+  function App(){
   
+const [value,setvalue] = useState(0);
 
-  return (
-    <>
-    <h1>react</h1>
-    <h2>{counter}</h2>
-     <button
-     onClick={addvalue}
-     >addvalue</button>
-     <button
-      onClick={removevalue}
-     >remove</button>
-     </>
-  )
+const add = ()=>{
+  
+  setvalue(value + 1);
+};
 
-}
+const remove = ()=>{
+
+  setvalue(value -1);
+};
+
+
+    return(
+      <>
+       <h2>hello react</h2>
+       <h1>{value}</h1>
+
+       <button onClick={add}>increment</button>
+       <button onClick={remove}>dicrement</button>
+       
+      </>
+    )
+  }
+
+
 export default App
